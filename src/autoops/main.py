@@ -1,24 +1,17 @@
 import sys
 
+from commands.hello import hello_command
+from commands.version import version_command
+from commands.help import help_command
+from commands.system import system_command
+from commands.files import files_command
+
 
 def start_application():
     print("===================================")
     print("🚀 Starting AutoOps...")
     print("===================================")
 
-def hello_command():
-    print("👋 Welcome to AutoOps!")
-
-
-def version_command():
-    print("AutoOps v0.1.0")
-
-
-def help_command():
-    print("Available commands:")
-    print("  hello")
-    print("  version")
-    print("  help")
 
 start_application()
 
@@ -34,6 +27,18 @@ if len(sys.argv) > 1:
 
   elif command == "help":
     help_command()
+  
+  elif command == "system":
+    system_command()
+
+  elif command == "files":
+
+    if len(sys.argv) > 2:
+        path = sys.argv[2]
+        files_command(path)
+
+    else:
+        files_command(".")
 
   else:
     print(f"❌ Unknown command: {command}")
