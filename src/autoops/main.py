@@ -6,6 +6,9 @@ from commands.help import help_command
 from commands.system import system_command
 from commands.files import files_command
 from commands.read import read_command
+from commands.find import find_command
+from commands.grep import grep_command
+from commands.run import run_command
 
 
 def start_application():
@@ -31,6 +34,30 @@ if len(sys.argv) > 1:
   
   elif command == "system":
     system_command()
+
+  elif len(sys.argv) >= 4 and sys.argv[1] == "grep":
+    query = sys.argv[2]
+    path = sys.argv[3]
+    grep_command(query, path)
+
+  elif command == "run":
+
+    if len(sys.argv) > 2:
+
+        cmd = " ".join(sys.argv[2:])
+
+        run_command(cmd)
+
+    else:
+        print("Usage: python main.py run <command>")
+
+  elif command == "find":
+
+    if len(sys.argv) > 2:
+        find_command(sys.argv[2])
+
+    else:
+        print("Usage: python main.py find <text>")
   
   elif command == "read":
 
