@@ -3,3 +3,4 @@ def help_command():
     print("  hello")
     print("  version")
     print("  help")
+    print("  read <file>")
