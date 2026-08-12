@@ -6,3 +6,4 @@ def help_command():
     print("  read <file>")
     print("  find <text>")
     print("  grep <text> <file_path>")
+    print("  docker")

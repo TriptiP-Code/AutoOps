@@ -1,0 +1,34 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Bytecode / Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Build / Packaging (since you have pyproject.toml)
+build/
+devel/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment Variables / Secrets
+.env
+.env.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp

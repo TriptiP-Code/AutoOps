@@ -9,6 +9,7 @@ from commands.read import read_command
 from commands.find import find_command
 from commands.grep import grep_command
 from commands.run import run_command
+from commands.docker_cmd import docker_ps
 
 
 def start_application():
@@ -39,6 +40,10 @@ if len(sys.argv) > 1:
     query = sys.argv[2]
     path = sys.argv[3]
     grep_command(query, path)
+
+  elif command == "docker":
+
+    docker_ps()
 
   elif command == "run":
 
